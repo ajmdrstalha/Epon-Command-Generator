@@ -11,4 +11,5 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # Run your script
-CMD ["python", "epon_command_generate.py"]
+CMD ["streamlit", "run", "epon_command_generate.py"]
+
