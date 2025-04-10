@@ -30,7 +30,7 @@ def generate_commands():
         # Command Block
         config_commands = (
             f"config\n"
-            f"int epon epon0/{olt_port}:{onu_id}\n"
+            f"int epon0/{olt_port}:{onu_id}\n"
             f"epon onu all-port ctc vlan mode tag {vlan_input}\n"
             f"description {description_input}\n"
             f"exit\n"
