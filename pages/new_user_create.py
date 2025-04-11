@@ -25,7 +25,10 @@ def generate_commands():
     if user_input and vlan_input and description_input:
         olt_port, onu_id = user_input.split()
         
-        st.markdown("**Generated Configuration Script:**")
+        # Show the confirm-onu line in a copyable code block
+        st.markdown("**Confirm/Configure ONU Command:**")
+        st.code(f"epon confirm-onu int epon0/{olt_port}:{onu_id}", language="bash")
+        st.code(f"epon conform-onu int epon0/{olt_port}:{onu_id}", language="bash")
         
         # Command Block
         config_commands = (
